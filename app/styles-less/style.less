@@ -1,0 +1,380 @@
+
+
+
+// VARIABLES 
+
+@color-principal: 	#9BC103;
+@color-secundario: 	#71c1c0;
+@color-light: 		#fff;
+
+@color-rojo: 		#ff4c00;
+@color-celeste: 	#06a2c9;
+@color-dark: 		#666;
+@color-fondo: 		#fffbee;
+@color-fondo-osc: 	#282828; 
+
+
+// FONTS
+
+@font-face {
+  font-family: 'Gotham_Bd';
+  src:  url('/fonts/GothamRounded-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gotham_Bd_It';
+  src:  url('/fonts/GothamRounded-BoldItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src:  url('/fonts/GothamRounded-Book.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gotham_It';
+  src:  url('/fonts/GothamRounded-BookItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gotham_Lt';
+  src:  url('/fonts/GothamRounded-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gotham_Lt_It';
+  src:  url('/fonts/GothamRounded-LightItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gotham_Md';
+  src:  url('/fonts/GothamRounded-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gotham_Md_It';
+  src:  url('/fonts/GothamRounded-MediumItalic.woff') format('woff');
+}
+
+
+
+
+
+// GENERAL
+
+body {
+
+	font-family: 'Roboto', sans-serif;
+}
+
+.centered_all {
+
+	margin-left: auto;
+
+	margin-right: auto; 
+}
+
+
+.centered_90 {
+
+	.centered_all;
+
+	width: 90%;
+
+}
+
+.centered_80 {
+
+	.centered_all;
+
+	width: 80%;
+
+}
+
+.centered_70 {
+
+	.centered_all;
+
+	width: 70%;
+
+}
+
+
+.gap {
+
+	height: 40px;
+}
+
+.mini_gap {
+
+	height: 20px; 
+}
+
+
+
+
+.portada {
+
+
+}
+
+.full_screen {
+
+	height: 100vh;
+
+	width: 100%; 
+
+	overflow: hidden;
+
+    text-align: center;  /* align the inline(-block) elements horizontally */
+    
+    font: 0/0 a;   
+
+	&:before {    /* create a full-height inline block pseudo=element */
+
+	    content: ' ';
+
+	    display: inline-block;
+
+	    vertical-align: middle;  /* vertical alignment of the inline element */
+
+	    height: 100%;
+	}
+
+	.imagen_portada {
+
+		background: url(../images/FONDOS/Haulani.jpg) no-repeat center center; 
+
+		width: 100%;
+
+		height: 100%;
+
+		-webkit-background-size: cover;
+
+		-moz-background-size: cover;
+
+		-o-background-size: cover;
+
+		background-size: cover;
+
+    	display: inline-block;
+    	
+    	vertical-align: middle;  /* vertical alignment of the inline element */
+    	
+    	font: 16px/1 Arial sans-serif;        /* <-- reset the font property */
+
+    }
+
+}
+
+.texto_portada {
+
+	position: absolute;
+
+	top: 40%; 
+    
+	text-align: center;
+    
+	width: 100%;
+
+	color: @color-light;
+
+	h1 {
+
+		font-family: Gotham_Md; 
+
+		text-transform: uppercase;
+
+		letter-spacing: 18px; 
+
+		font-size: 40pt;
+
+		margin: 0;
+
+		small {
+
+			color: @color-light;
+
+			font-family: Gotham_Lt; 
+
+			font-size: 100%;
+		}
+
+	}
+
+	h4 {
+
+		font-family: 'Roboto', sans-serif;
+
+		//letter-spacing: 1px; 
+
+		font-size: 10pt;
+
+		font-weight: 300; 
+
+		max-width: 400px; 
+
+		margin-left: auto; 
+
+		margin-right: auto; 
+
+		padding: 0px 20px; 
+	}
+
+}
+
+
+footer {
+
+	background-color: @color-fondo-osc; 
+
+	color: @color-light;
+
+	//font-size: 100%; 
+
+	h2 {
+
+		font-size: 16pt; 
+
+		font-family: Gotham_Md; 
+
+		letter-spacing: 8px; 
+
+		margin-top: 0; 
+
+		small {
+
+			color: @color-light; 
+
+			font-size: 100%; 
+
+			font-family: Gotham_Lt; 
+		}
+	}
+
+	h4 {
+
+		font-size: 12px; 
+
+		font-family: Gotham_Md; 
+
+		margin-top: 10px; 
+
+		margin-bottom: 30px; 
+
+		letter-spacing: 2px; 
+
+		text-transform: uppercase;
+	}
+
+}
+
+.bottom_bar {
+
+	.centered_90; 
+
+	padding: 30px; 
+
+	text-align: center;
+
+	.copyright {
+
+		float: left;
+
+		font-size: 10px; 
+
+		font-weight: 200; 
+	}
+
+	.social {
+
+		float: right;
+
+		i {
+
+			padding: 10px; 
+		}
+	}
+
+}
+
+
+
+.btn_navegacion {
+
+	padding: 6px 20px; 
+
+	border: 1px solid @color-light; 
+
+	border-radius: 0.1em;
+
+	font-size: 12px; 
+
+	color: @color-light; 
+
+
+	&:hover {
+
+		color: @color-fondo-osc; 
+
+		background-color: @color-light; 
+
+		opacity: 0.6; 
+	}
+
+}
+
+
+
+a, a:hover, a:active, a:focus {
+
+	text-decoration: none;
+
+	outline: 0; 
+
+}
+
+
+
+
+.recent_post {
+
+	margin-bottom: 20px; 
+
+	p {
+
+		font-size: 10px; 
+
+		letter-spacing: 0.5px; 
+
+		font-weight: 400; 
+
+		margin-bottom: 0; 
+
+
+		&.fecha {
+
+			font-weight: 100; 
+
+			margin-top: 0; 
+		}
+	}
+
+	span {
+
+		display: table-cell;
+	}
+
+	.twitter_text {
+
+		font-weight: 300; 
+
+		font-size: 10px; 
+
+		letter-spacing: 0.3px; 
+
+		padding: 0 10px; 
+	}
+
+}
+
