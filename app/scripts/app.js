@@ -26,6 +26,21 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/actividad', {
+        templateUrl: 'views/actividad.html',
+        controller: 'ActividadCtrl',
+        controllerAs: 'actividad'
+      })
+      .when('/proyecto', {
+        templateUrl: 'views/proyecto.html',
+        controller: 'ProyectoCtrl',
+        controllerAs: 'proyecto'
+      })
+      .when('/emprendimiento', {
+        templateUrl: 'views/emprendimiento.html',
+        controller: 'EmprendimientoCtrl',
+        controllerAs: 'emprendimiento'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
