@@ -31,6 +31,10 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/aruma', {
+        templateUrl: 'views/aruma.html',
+        controller: 'ArumaCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
