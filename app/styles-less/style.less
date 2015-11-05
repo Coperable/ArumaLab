@@ -144,7 +144,9 @@ body {
 
 	.imagen_portada {
 
-		background: url(../images/ARUMA/aruma_cover00.jpg) no-repeat center center; 
+		//background: url(attr(img)) no-repeat center center; 
+
+		//background: url(../images/haulani/hau_cover00.jpg) no-repeat center center; 
 
 		width: 100%;
 
@@ -163,6 +165,13 @@ body {
     	vertical-align: middle;  /* vertical alignment of the inline element */
     	
     	font: 16px/1 Arial sans-serif;        /* <-- reset the font property */
+
+    	img {
+
+    		min-width: 100%; 
+
+    		min-height: 100%; 
+    	}
 
     }
 
@@ -762,10 +771,424 @@ a, a:hover, a:active, a:focus {
 
 
 
+.centrado_completo {
+
+    width: 100%; 
+
+    margin: 0 auto; 
+
+}
+
+// EMPRENDIMIENTOS
+
+.tabs_lookeadas {
+
+	margin-top: 15%; 
+
+    text-align: center; 
+
+    //border-bottom: 1px solid @color-secundario; 
+
+    //border-top: 1px solid @color-secundario;
+
+    //padding-top: 0;
+
+    .nav > li {
+
+	    position: relative;
+
+	    display: inline-block;
+
+	    float: none; 
+
+	}
+
+    .nav-tabs {
+
+        padding: 0;
+
+        border: 0;
+
+        //margin: 0 20%;
+
+        & > li > a {
+
+            text-align: center;
+
+            padding: 0px;
+
+            margin: 0 20px; 
+
+            color: @color-dark;
+
+            font-family: Gotham_Md; 
+
+            font-size: 11pt;
+
+            letter-spacing: 1pt;
+
+            line-height: 30pt;
+
+            text-transform: uppercase;
+
+            border: 0; 
+
+            cursor: pointer;
+
+            i {
+                
+                vertical-align: middle;
+
+                font-size: 24pt;
+
+                padding-right: 10px;
+            }
+
+            &:hover {
+
+                opacity: 0.6;
+            }
+
+        }
+
+        & > li.active a {
+
+            color: @color-principal;
+
+            border: none;
+
+            border-bottom: 1px solid @color-principal;
+
+            &:hover {
+
+                opacity: 1;
+            }
+
+        }
+
+    }
+
+}
+
+.tab-pane {
+
+	padding: 2% 8%; 
+}
+
+.sec_productos {
+
+	.centered_90; 
+
+	h1 {
+
+		text-align: center;
+
+		font-family: Gotham_Md;
+
+		color: @color-principal; 
+
+		text-transform: uppercase;
+
+		letter-spacing: 8px; 
+
+		margin: 40px 0; 
+
+	}
+}
+
+.tarjeta_producto {
+
+	img {
+
+		padding: 0 20px; 
+
+		width: 100%; 
+
+	}
+
+	p {
+
+		font-size: 10px; 
+
+		padding: 0 20px; 
+
+		margin-top: 10px; 
+
+		line-height: 1.6; 
+	}
+
+}
+
+.sec_donde {
+
+}
+
+.donde_tit {
+
+	background-color: @color-destacado; 
+
+	h1 {
+
+		border-top: 1px solid @color-light; 
+
+		border-bottom: 1px solid @color-light; 
+
+		color: @color-light; 
+
+		margin: 0 20%;  
+
+		padding: 20px 0; 
+
+		text-transform: uppercase;
+
+		font-size: 35px; 
+
+		font-weight: 300; 
+
+		letter-spacing: 8px; 
+	}
+}
+
+.donde_map {
+
+	padding: 0; 
+}
+
+
+.sec_twitter {
+
+	background-color: @color-fondo-osc; 
+
+	text-align: center;
+
+	padding: 20px 0; 
+
+	i {
+
+		display: block;
+
+		color: @color-principal; 
+
+		font-size: 40px; 
+	}
+
+	p {
+
+		color: @color-light; 
+
+		letter-spacing: 2px; 
+
+		margin: 20px auto; 
+
+		max-width: 60%; 
+
+	} 
+}
+
+
+.sec_fotos {
+
+	text-align: center;
+
+	h1 {
+
+		font-family: Gotham_Md; 
+
+		text-transform: uppercase;
+
+		font-size: 30px; 
+
+		margin-top: 40px; 
+	}
+
+	h4 {
+
+		text-transform: uppercase;
+
+		letter-spacing: 2px; 
+
+		font-size: 12px; 
+	}
+}
+
+.grilla_instagram {
+
+	margin: 0 20px; 
+
+	& > div {
+
+		img {
+
+			width: 100%; 
+
+			padding: 10px; 
+
+			margin: 10px 0; 
+		}
+	}
+}
 
 
 
 
+
+
+
+
+// ------------------------------
+// full width bootstrap cols
+
+/* USAGE
+<div class="row">
+  <div class="row-height">
+    <div class="col-xs-2 col-xs-height col-xs-middle">
+      <div class="inside"></div>
+    </div>
+    <div class="col-xs-4 col-lg-5 col-xs-height col-xs-middle">
+      <div class="inside"></div>
+    </div>
+  </div>
+</div>
+*/
+
+/* content styles */
+
+.inside {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #ededed;
+  background: -webkit-gradient(linear, left top, left bottom,color-stop(0%, #f4f4f4), color-stop(100%, #ededed));
+  background: -moz-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
+  background: -ms-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
+}
+.inside-full-height {
+  /*
+  // if you want to give content full height give him height: 100%;
+  // with content full height you can't apply margins to the content
+  // content full height does not work in ie http://stackoverflow.com/questions/27384433/ie-display-table-cell-child-ignores-height-100
+  */
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.content {
+  padding: 12px 3px;
+}
+
+/* columns of same height styles */
+
+.row-height {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+}
+.col-height {
+  display: table-cell;
+  float: none;
+  height: 100%;
+}
+.col-top {
+  vertical-align: top;
+}
+.col-middle {
+  vertical-align: middle;
+}
+.col-bottom {
+  vertical-align: bottom;
+}
+
+@media (min-width: 480px) {
+  .row-xs-height {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+  }
+  .col-xs-height {
+    display: table-cell;
+    float: none;
+    height: 100%;
+  }
+  .col-xs-top {
+    vertical-align: top;
+  }
+  .col-xs-middle {
+    vertical-align: middle;
+  }
+  .col-xs-bottom {
+    vertical-align: bottom;
+  }
+}
+
+@media (min-width: 768px) {
+  .row-sm-height {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+  }
+  .col-sm-height {
+    display: table-cell;
+    float: none;
+    height: 100%;
+  }
+  .col-sm-top {
+    vertical-align: top;
+  }
+  .col-sm-middle {
+    vertical-align: middle;
+  }
+  .col-sm-bottom {
+    vertical-align: bottom;
+  }
+}
+
+@media (min-width: 992px) {
+  .row-md-height {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+  }
+  .col-md-height {
+    display: table-cell;
+    float: none;
+    height: 100%;
+  }
+  .col-md-top {
+    vertical-align: top;
+  }
+  .col-md-middle {
+    vertical-align: middle;
+  }
+  .col-md-bottom {
+    vertical-align: bottom;
+  }
+}
+
+@media (min-width: 1200px) {
+  .row-lg-height {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+  }
+  .col-lg-height {
+    display: table-cell;
+    float: none;
+    height: 100%;
+  }
+  .col-lg-top {
+    vertical-align: top;
+  }
+  .col-lg-middle {
+    vertical-align: middle;
+  }
+  .col-lg-bottom {
+    vertical-align: bottom;
+  }
+}
 
 
 
