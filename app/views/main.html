@@ -1,12 +1,28 @@
+
+<div class="parallax">
+    
+    <div class="parallax__layer parallax__layer--back">
+
+        <div class="imagen_encabezado">
+
+            <div style="background-image: url('../images/ARUMA/aruma_cover00.jpg');" class="imagen_portada"></div>
+
+        </div>
+    
+    </div>
+    
+    <div class="parallax__layer parallax__layer--base">
+    
+        <div class="title">This is the foreground</div>
+    
+    </div>
+
     <!-- - - - - - - - - - - - - - - - - - - - - - - - 
 
     PORTADA 
 
     - - - - - - - - - - - - - - - - - - - - - - - -->
-  
     <div class="full_screen" id="portada">
-
-        <div class="imagen_portada" style="background: url(../images/ARUMA/aruma_cover00.jpg) no-repeat center center;"></div>
 
         <div class="texto_portada">
           
@@ -18,6 +34,7 @@
 
     </div>
 
+
     <div><a href="/proyecto">ARUMA LINK</a></div>
 
 
@@ -27,188 +44,199 @@
 
     - - - - - - - - - - - - - - - - - - - - - - - -->
 
-    <div id="inicio"></div>
+    <div class="seccion_principal">
 
-    <!--
-    <div ng-include = "'/views/main.html'"></div>
-    -->
+        <div id="inicio"></div>
 
-    <div class="mini_gap"></div>
-
-    <div>
-
-        <div class="button-group filters-button-group">
-
-            <button class="btn_filtro is-checked" data-filter="*">todo</button>
-
-            <button class="btn_filtro" data-filter=".tag_novedades">novedades</button>
-
-            <button class="btn_filtro" data-filter=".tag_emprendimientos">emprendimientos</button>
-
-            <button class="btn_filtro" data-filter=".tag_actividades">actividades</button>
-
-            <button class="btn_filtro" data-filter=".tag_laboratorio">LABORATORIO</button>
-
-        </div>
-
-        <div class="toggle_map">
-
-            <h4>board <i class="fa fa-toggle-off"></i> mapa</h4>
-
-        </div>
+        <!--
+        <div ng-include = "'/views/main.html'"></div>
+        -->
 
         <div class="mini_gap"></div>
 
-        <div class="grid">
+        <div>
 
-          <div class="grid-sizer"></div>
+            <div class="button-group filters-button-group">
 
-          <div class="grid-item tag_emprendimientos tag_novedades">
+                <button class="btn_filtro is-checked" data-filter="*">todo</button>
 
-            <a href="#/emprendimiento">
+                <button class="btn_filtro" data-filter=".tag_novedades">novedades</button>
 
-            <img src="/images/haulani/hau_cover01.jpg" />
+                <button class="btn_filtro" data-filter=".tag_emprendimientos">emprendimientos</button>
 
-            <div class="caption"><div>
+                <button class="btn_filtro" data-filter=".tag_actividades">actividades</button>
 
-                <h2>Haulani</h2>
+                <button class="btn_filtro" data-filter=".tag_laboratorio">LABORATORIO</button>
 
-                <span>Helados que hacen bien</span>
+            </div>
 
-            </div></div></a>
+            <div class="toggle_map">
 
-          </div>
+                <h4>board <i class="fa fa-toggle-off"></i> mapa</h4>
 
-          <div class="grid-item tag_laboratorio">
+            </div>
 
-            <img src="/images/laPazAlimenta/laPazAlimenta_cover01.jpg" />
+            <div class="mini_gap"></div>
 
-            <div class="caption"><div>
+            <div class="grid">
 
-                <h2>La Paz Alimenta</h2>
+              <div class="grid-sizer"></div>
 
-                <span>Alimentación Sagrada | Resto & clases</span>
+              <div class="grid-item tag_emprendimientos tag_novedades">
 
-            </div></div>
+                <a href="#/emprendimiento">
 
-          </div>
+                <img src="/images/haulani/hau_cover01.jpg" />
 
-          <div class="grid-item tag_actividades tag_novedades">
+                <div class="caption"><div>
 
-            <img src="/images/EVENTOS/terapiaFloral02.jpg" />
+                    <h2>Haulani</h2>
 
-            <div class="caption"><div>
+                    <span>Helados que hacen bien</span>
 
-                <h2>Terapia Floral</h2>
+                </div></div></a>
 
-                <span>Taller Teórico / Práctico</span>
+              </div>
 
-                <span class="lugar">Beccar</span>
+              <div class="grid-item tag_laboratorio">
 
-            </div></div>
+                <img src="/images/laPazAlimenta/laPazAlimenta_cover01.jpg" />
 
-          </div>
+                <div class="caption"><div>
 
-          <div class="grid-item tag_emprendimientos tag_novedades">
+                    <h2>La Paz Alimenta</h2>
 
-            <img src="/images/amasutra/amasutra_cover01.jpg" />
+                    <span>Alimentación Sagrada | Resto & clases</span>
 
-            <div class="caption"><div>
+                </div></div>
 
-                <h2>Amasutra</h2>
+              </div>
 
-                <span>Alimento para la Piel</span>
+              <div class="grid-item tag_actividades tag_novedades">
 
-            </div></div>
+                <img src="/images/EVENTOS/terapiaFloral02.jpg" />
 
-          </div>
+                <div class="caption"><div>
 
-          <div class="grid-item tag_emprendimientos tag_novedades">
+                    <h2>Terapia Floral</h2>
 
-            <img src="/images/ARUMA/aruma_cover01.jpg" />
+                    <span>Taller Teórico / Práctico</span>
 
-            <div class="caption"><div>
+                    <span class="lugar">Beccar</span>
 
-                <h2>Comunidad Aruma</h2>
+                </div></div>
 
-                <span class="lugar">Beccar</span>
+              </div>
 
-            </div></div>
+              <div class="grid-item tag_emprendimientos tag_novedades">
 
-          </div>
+                <img src="/images/amasutra/amasutra_cover01.jpg" />
 
-          <div class="grid-item tag_emprendimientos tag_novedades">
+                <div class="caption"><div>
 
-            <img src="/images/germinar/germinar_cover01.png" />
+                    <h2>Amasutra</h2>
 
-            <div class="caption"><div>
+                    <span>Alimento para la Piel</span>
 
-                <h2>Germinar</h2>
+                </div></div>
 
-                <span class="lugar">Beccar</span>
+              </div>
 
-            </div></div>
+              <div class="grid-item tag_emprendimientos tag_novedades">
 
-          </div>
+                <img src="/images/ARUMA/aruma_cover01.jpg" />
 
-          <div class="grid-item">
+                <div class="caption"><div>
 
-            <img src="/images/mana/mana_cover01.jpg" />
+                    <h2>Comunidad Aruma</h2>
 
-            <div class="caption"><div>
+                    <span class="lugar">Beccar</span>
 
-                <h2>Mána</h2>
+                </div></div>
 
-                <span>Bebidas para disfrutar con alegría</span>
+              </div>
 
-            </div></div>
+              <div class="grid-item tag_emprendimientos tag_novedades">
 
-          </div>
+                <img src="/images/germinar/germinar_cover01.png" />
 
-          <div class="grid-item">
+                <div class="caption"><div>
 
-            <a href="#/actividad">
+                    <h2>Germinar</h2>
 
-            <img src="/images/EVENTOS/Reiki_cover02.jpg" />
+                    <span class="lugar">Beccar</span>
 
-            <div class="caption"><div>
+                </div></div>
 
-                <h2>Reiki Nivel 1</h2>
+              </div>
 
-                <span>Taller Teórico / Práctico</span>
+              <div class="grid-item">
 
-                <span class="lugar">Beccar</span>
+                <img src="/images/mana/mana_cover01.jpg" />
 
-            </div></div></a>
+                <div class="caption"><div>
 
-          </div>
+                    <h2>Mána</h2>
+
+                    <span>Bebidas para disfrutar con alegría</span>
+
+                </div></div>
+
+              </div>
+
+              <div class="grid-item">
+
+                <a href="#/actividad">
+
+                <img src="/images/EVENTOS/Reiki_cover02.jpg" />
+
+                <div class="caption"><div>
+
+                    <h2>Reiki Nivel 1</h2>
+
+                    <span>Taller Teórico / Práctico</span>
+
+                    <span class="lugar">Beccar</span>
+
+                </div></div></a>
+
+              </div>
+
+            </div>
 
         </div>
 
-    </div>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - 
 
-    <!-- - - - - - - - - - - - - - - - - - - - - - - - 
+        BARRA DE INFORMACIÓN
 
-    BARRA DE INFORMACIÓN
+        - - - - - - - - - - - - - - - - - - - - - - - -->
 
-    - - - - - - - - - - - - - - - - - - - - - - - -->
+        <div class="sec_info">
 
-    <div class="sec_info">
+            <div class="info_inner">
+            
+                <h1>Estamos en contacto</h1>
 
-        <div class="info_inner">
-        
-            <h1>Estamos en contacto</h1>
+                <div class="info_botones">
 
-            <div class="info_botones">
+                    <button class="btn_action">Newsletter</button>
 
-                <button class="btn_action">Newsletter</button>
+                    <button class="btn_nav">Escribinos</button>
 
-                <button class="btn_nav">Escribinos</button>
+                </div>
 
             </div>
 
         </div>
 
     </div>
+
+</div>
+
+
+
+
+
 
 

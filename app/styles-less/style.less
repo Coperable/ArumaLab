@@ -58,10 +58,11 @@
 }
 
 
-
-
-
+// --------------------------------------------
+//
 // GENERAL
+//
+// --------------------------------------------
 
 body {
 
@@ -111,13 +112,129 @@ body {
 	height: 20px; 
 }
 
+.nav-bar {
+
+	position: fixed;
+
+	top: 0; 
+
+	z-index: 10000; 
+
+	width: 100%; 
+
+	//background: @color-principal;
+
+	color: @color-light; 
+
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0.1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.1) 100%); /* W3C */
+}
+
+.nav-breadcrumb {
+
+	padding: 8px 20px; 
+
+	font-family: Gotham_Md; 
+
+	text-transform: uppercase;
+
+	i {
+
+		padding: 0 8px; 
+	}
+
+	a {
+
+		color: @color-light; 
+
+		small {
+
+			font-size: 100%; 
+
+			font-family: Gotham_Lt; 
+		}
+	}
+}
 
 
+// --------------------------------------------
+//
+// PORTADA
+//
+// --------------------------------------------
 
 .portada {
 
-
 }
+
+ /* Parallax base styles --------------------- */
+
+ .parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 1px;
+    perspective: 1px;
+  }
+
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  .parallax__layer--back {
+    -webkit-transform: translateZ(-1px);
+    transform: translateZ(-1px);
+
+    padding: 0; 
+
+  }
+
+
+   /* add some padding to force scrollbars */
+  .parallax__layer {
+
+    padding: 100vh 0;
+
+    background-size: cover;
+
+    width: 100%;
+  }
+
+
+ .imagen_encabezado {
+
+	position: absolute;
+	width: 201%;
+	left: -51%;
+	top: -25%;
+	height: 100%; 
+}
+
+
+//Sección que contiene TODA información abajo de la 'portada'
+.seccion_principal {
+
+	background-color: #fff;
+
+	position: relative;
+}
+
+
+
+  // ------------------------------
 
 .full_screen {
 
@@ -141,6 +258,8 @@ body {
 
 	    height: 100%;
 	}
+
+}
 
 	.imagen_portada {
 
@@ -172,8 +291,6 @@ body {
 
     }
 
-}
-
 .texto_portada {
 
 	position: absolute;
@@ -197,6 +314,8 @@ body {
 		font-size: 40pt;
 
 		margin: 0;
+
+		color: @color-light !important;
 
 		small {
 
@@ -728,6 +847,10 @@ a, a:hover, a:active, a:focus {
 //--------------------------- masonry
 
 
+@screen-xs-min: 	640px; 
+@screen-sm-min: 	768px; 
+@screen-md-min:		992px; 
+@screen-lg-min: 	1200px; 
 
 /* ---- isotope ---- */
 
@@ -752,12 +875,32 @@ a, a:hover, a:active, a:focus {
 
 /* ---- .grid-item ---- */
 
+
+
+
+
 .grid-sizer,
 .grid-item {
-
-  width: 33.333%;
   
-  overflow: hidden; 
+	overflow: hidden; 
+
+	/* Small devices (tablets, 768px and up) */
+	@media (min-width: @screen-xs-min) {
+
+		width: 100%; 
+	}
+
+	/* Medium devices (desktops, 992px and up) */
+	@media (min-width: @screen-sm-min) {
+
+		width: 50%; 
+	}
+
+	/* Large devices (large desktops, 1200px and up) */
+	@media (min-width: @screen-lg-min) {
+
+		width: 33.333%; 
+	}
 
 }
 
@@ -767,9 +910,11 @@ a, a:hover, a:active, a:focus {
 
 	img {
 
-	  display: block;
+		display: block;
 
-	  max-width: 100%;
+		width: 100%; 
+
+		max-width: 100%;
 
 	}
 
@@ -836,7 +981,7 @@ a, a:hover, a:active, a:focus {
 
 			line-height: 1; 
 
-			font-size: 9px; 
+			font-size: 10px; 
 
 			font-family: Gotham; 
 
@@ -860,6 +1005,23 @@ a, a:hover, a:active, a:focus {
 					content: ' - '; 
 				}
 			}
+		}
+
+		&:hover {
+
+			background-color: rgba(0, 0, 0, 0.5);
+
+			h2 {
+
+				font-size: 22px; 
+			}
+
+			& > div {
+
+				padding-bottom: 20px; 
+
+			}
+
 		}
 	}
 
@@ -1294,7 +1456,5 @@ a, a:hover, a:active, a:focus {
     vertical-align: bottom;
   }
 }
-
-
 
 
